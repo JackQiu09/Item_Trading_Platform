@@ -1,0 +1,4 @@
+Please type in the id of the item you want to trade:
+please suggest a price:
+Please suggest a time to trade(e.g. year-month-day-time 2020-07-09-13:00):
+Please suggest a place to trade:

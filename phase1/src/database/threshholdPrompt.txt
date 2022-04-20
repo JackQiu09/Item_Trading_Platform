@@ -1,0 +1,4 @@
+Type the corresponding '#' to choose your option
+1. Change Specific User Threshold (Type in userid, threshold name, new threshold value)
+2. Change Universal Threshold(Type in thresholdName, new threshold  value)
+9. Log Out

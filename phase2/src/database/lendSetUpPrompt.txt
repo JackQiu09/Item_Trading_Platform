@@ -1,0 +1,4 @@
+Please type in the id of the item you want to lend:
+Please type in the name of the user you want to lend to:
+Please suggest a time(e.g. 2020-09-09-12:00):
+Please suggest a place to meet:

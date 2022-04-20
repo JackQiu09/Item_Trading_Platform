@@ -1,0 +1,3 @@
+Type the corresponding '#' to choose your option
+1. View your pending transactions
+2. Confirm a transaction

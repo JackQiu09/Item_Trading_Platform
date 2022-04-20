@@ -1,0 +1,1 @@
+How much do you want to deposit (enter in the form 500.34, do not enter dollar sign): 

@@ -1,0 +1,2 @@
+Please Enter The Transaction Ticket ID:
+Have you successfully completed the trade?(Enter true/false):

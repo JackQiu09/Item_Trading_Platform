@@ -1,0 +1,77 @@
+﻿Design Pattern Decisions
+Iterator design pattern
+Class used in
+Properties Iterator
+Utilized in all systems in controller
+
+
+Why/How
+We utilized this inorder to make our prompts in our program easier to extend as all you have to do is add more prompts in the text file. It iterates through the text file and displays it in our program. It allows for a standard method to do a common functionality so we don’t need to code it for every controller that utilizes it. 
+
+
+Template Pattern
+Class used in:
+Admin User, Initial Admin User
+Why/How:
+Template pattern requires that we “define the skeleton of a function in an operation, deferring some steps to its subclasses.” The subclass initialAdminUser extends the superclass AdminUser as they share common behaviours.
+
+
+Facade Pattern
+"just provide a unified and simplified interface to a set of interfaces in a subsystem, therefore it hides the complexities of the subsystem from the client"
+Class used in:
+AdminUserSystem, TradingSystem, ClientUserSystem, TransactionTicketSystem, LoginSystem, SignUpSystem, StartMenuSystem, AppointmentSystem.
+Why/How:
+We split our ui into different systems where we moved the functionality to helper functions and mainly away from where we process the input. We split our system based on the different menus needed inorder to make our program run. This stops our ui from being one class mess with multiple functionalities in one class. This allows us to easily extend our ui too as you can move the ui around easily and know where to access what.
+
+
+Factory Method Pattern
+Class used in:
+Client User, Admin User, Initial Admin User, user
+Why/How:
+We had admin user , initial admin user and client user extend from user. They all access get username and get password from user but does different things, therefore factory method pattern is implemented so that admin user and client user does not 
+
+
+
+
+
+
+Observer Pattern
+"just define a one-to-one dependency so that when one object changes state, all its dependents are notified and updated automatically".
+Class used in AppointmentManager, ClientUserManager, AppointmentSnapshotManager, ClientUserSnapshotManager
+Why/How: When admin user wants to undo action done by users, AppointmentManager and ClientUserManager extends the Observable and sets the changes to the client user and their appointment and then the method that did the changes notifies AppointmentSnapshotManager and ClientUserSnapshotManager which are the observers of the changes.
+
+
+Memento Pattern
+What class used it: SnapshotSystem, AppointmentSnapshotManager, ClientUserSnapshotManager, ClientUser, Appointment.
+
+
+Why/How: we want admin to have the ability to undo action, AppointmentSnapshotManager and ClientUserSnapshotManager save the state of ClientUser and Appointment and undo the action when requested to.
+
+
+
+
+
+
+Mediator Pattern
+ This pattern provides a mediator class which normally handles all the communications between different classes and supports easy maintainability of the code by loose coupling
+Class used in: All the managers
+Why/Used:
+Our manager classes handle the entities, and controllers access the manager classes. One example is that thresholdManager handles all thresholds that an user can have. This way, we are able to govern and access all the threshold values that are stored in other different instances by one manager. Trade manager is also another obvious mediator that links the entities and utilized inside our controllers. 
+
+
+
+
+
+
+
+
+Builder Design Pattern
+The Builder Design Pattern is applied in order to avoid too many arguments in the constructor. 
+Class used in: 
+In the program, the Builder Pattern of MultipleChoiceView is applied in StartMenuSystem, ItemDetailView, VisitorBrowseItemView, VisitorBrowseWithTypeView, VisitorMenuView, and VisitorSearchItemView. 
+There is another Builder interface created in the class Label, and one Builder interface created in the class SelectionField. They are both called in the method component called in StartMenuSystem while override the method view. Also ItemListView, ProgressBar, and ShortAnswerView apply the Builder Pattern to construct the instance of Label. 
+The Builder Pattern created in ProgressBar is applied in ItemListView and ShortAnswerView; the Builder Pattern created in TextField is applied in ShortAnswerView, VisitorBrowseItemView and VisitorBrowseWithTypeView; the Builder Pattern created in SelectionField is applied in MultipleChoiceView. 
+
+
+Why/Used:
+For the example in the class MultipleChoiceView, since the constructor of MultipleChoiceView class already has four parameters. In order to add more parameters without confusion about what’s in the constructor, Builder Design Pattern is applied. The class MultipleChoiceView is basically designed for the view, so that different choices can be chosen by the corresponding output and call the related function. In the class StartMenuSystem inherits the abstract class View. In the override method view, the method component is called, and the getBuilder is called to set the instance of MultipleChoiceView.

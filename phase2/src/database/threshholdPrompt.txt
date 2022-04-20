@@ -1,0 +1,10 @@
+Type the corresponding '#' to choose your option
+====================================== THRESHOLDS =================================================
+lentBorrowDiff: how many more items a user has to lend compared to borrowing to be able to trade
+incompleteLimit: the maximum incomplete transactions a user can have
+transactionLimit: The maximum transactions a user can make in one week
+editsCount: The number of edits a user can make to a trade
+===================================================================================================
+1. Change Specific User Threshold (Type in userId, threshold name, new threshold value)
+2. Change Universal Threshold(Type in thresholdName, new threshold  value)
+9. Log Out
